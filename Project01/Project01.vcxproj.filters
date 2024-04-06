@@ -23,5 +23,8 @@
     <ClInclude Include="SteamUser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Admin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
