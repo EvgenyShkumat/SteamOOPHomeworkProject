@@ -29,4 +29,6 @@ public:
 	void replenish(double amount) {
 		balance += amount;
 	}
+
+	~SteamUser() { }
 };

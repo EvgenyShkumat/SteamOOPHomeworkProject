@@ -8,12 +8,11 @@ int main() {
 	srand(time(NULL));
 
 	SteamUser user1{};
+	SteamUser user2("MrFish", 10.52, false, 5, 102);
 
 	cout << user1.getInfo() << endl;
-
 	cout << "---------------------------\n";
-	user1.replenish(5.71);
-	cout << user1.getInfo();
+	cout << user2.getInfo() << endl;
 
 	return 0;
 }
