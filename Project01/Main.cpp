@@ -5,15 +5,13 @@ using namespace std;
 
 
 int main() {
-	SteamUser user1;
+	srand(time(NULL));
 
-	user1.name = "MrFly";
-	user1.balance = 17.23;
-	user1.is_banned = false;
-	user1.level = 10;
-	user1.hour = 561;
+	SteamUser user1{};
 
 	cout << user1.getInfo() << endl;
+
+	cout << "---------------------------\n";
 	user1.replenish(5.71);
 	cout << user1.getInfo();
 
