@@ -1,25 +1,8 @@
 #include <iostream>
 #include <string>
+#include "SteamUser.h"
 using namespace std;
 
-class SteamUser {
-public:
-	string name;
-	double balance;
-	bool is_banned;
-	int level;
-	int hour;
-
-	string getInfo() {
-		return "Name: " + name + "\nBalance: " + to_string(balance) +
-			"\nSteam account level: " + to_string(level) + "\nTotal hours spent: " +
-			to_string(hour) + " hours\nIs banned: " + (is_banned ? "Yes" : "No");
-	}
-
-	void replenish(double amount) {
-		balance += amount;
-	}
-};
 
 int main() {
 	SteamUser user1;
