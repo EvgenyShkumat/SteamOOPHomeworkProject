@@ -18,8 +18,8 @@ int main() {
 	const int size = 4;
 	SteamUser accounts[size]{user1, user2, user3, user4};
 	
-	cout << "All banned accounts: " << admin.find_all_banned_accounts(accounts, size) << endl;
-	cout << "The richest accoutn is: " << admin.findRichestAccount(accounts, size).name << endl;
+	cout << "All banned accounts: " << admin.findAllBannedAccounts(accounts, size) << endl;
+	cout << "The richest accoutn is: " << admin.findRichestAccount(accounts, size).getName() << endl;
 
 	return 0;
 }

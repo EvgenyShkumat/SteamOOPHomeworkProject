@@ -3,13 +3,13 @@
 
 class Admin {
 public:
-	double find_richest_balance(SteamUser* accounts, int length) {
-		double max_balance = accounts[0].balance;
+	double findRichestBalance(SteamUser* accounts, int length) {
+		double max_balance = accounts[0].getBalance();
 
 		for (int i = 1; i < length; i++)
 		{
-			if (accounts[i].balance > max_balance) {
-				max_balance = accounts[i].balance;
+			if (accounts[i].getBalance() > max_balance) {
+				max_balance = accounts[i].getBalance();
 			}
 		}
 
@@ -17,12 +17,12 @@ public:
 	}
 
 	SteamUser findRichestAccount(SteamUser* accounts, int length) {
-		double balance = find_richest_balance(accounts, length);
+		double balance = findRichestBalance(accounts, length);
 		SteamUser user;
 
 		for (int i = 0; i < length; i++)
 		{
-			if (accounts[i].balance == balance) {
+			if (accounts[i].getBalance() == balance) {
 				user = accounts[i];
 				break;
 			}
@@ -31,13 +31,13 @@ public:
 		return user;
 	}
 
-	string find_all_banned_accounts(SteamUser* accounts, int length) {
+	string findAllBannedAccounts(SteamUser* accounts, int length) {
 		string msg = "";
 
 		for (int i = 0; i < length; i++)
 		{
-			if (accounts[i].is_banned) {
-				msg += accounts[i].name + " ";
+			if (accounts[i].getIs_banned()) {
+				msg += accounts[i].getName() + " ";
 			}
 		}
 

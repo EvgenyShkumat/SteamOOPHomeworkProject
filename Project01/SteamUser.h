@@ -4,12 +4,13 @@
 using namespace std;
 
 class SteamUser {
-public:
+private:
 	string name;
 	double balance;
 	bool is_banned;
 	int level;
 	int hour;
+public:
 
 	SteamUser(string name2 = ("user_" + to_string(rand() % 10000)), double balance2 = 0,
 		bool is_banned2 = false, int level2 = 0, int hour2 = 0) {
@@ -31,4 +32,17 @@ public:
 	}
 
 	~SteamUser() { }
-};
+
+	string getName() { return name; }
+	void setName(string thisName) { name = thisName; }
+
+	double getBalance() { return balance; }
+
+	bool getIs_banned() { return is_banned; }
+
+	bool getLevel() { return level; }
+	void setLevel(int thisLevel) { level = thisLevel; }
+
+	int getHour() { return hour; }
+	void setHour(int thisHour) { hour = thisHour; }
+}; 
