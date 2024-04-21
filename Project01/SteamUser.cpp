@@ -1,11 +1,11 @@
 #include "SteamUser.h"
 
-SteamUser::SteamUser(string name2, double balance2 , bool is_banned2 , int level2 , int hour2 ) {
-	name = name2;
-	balance = balance2;
-	is_banned = is_banned2;
-	level = level2;
-	hour = hour2;
+SteamUser::SteamUser(string name, double balance , bool is_banned , int level , int hour ) {
+	this->name = name;
+	this->balance = balance;
+	this->is_banned = is_banned;
+	this->level = level;
+	this->hour = hour;
 }
 
 string SteamUser::getInfo() {
@@ -21,14 +21,14 @@ void SteamUser::replenish(double amount) {
 SteamUser::~SteamUser() { }
 
 string SteamUser::getName() { return name; }
-void SteamUser::setName(string thisName) { name = thisName; }
+void SteamUser::setName(string name) { this->name = name; }
 
 double SteamUser::getBalance() { return balance; }
 
 bool SteamUser::getIs_banned() { return is_banned; }
 
 bool SteamUser::getLevel() { return level; }
-void SteamUser::setLevel(int thisLevel) { level = thisLevel; }
+void SteamUser::setLevel(int Level) { this->level = level; }
 
 int SteamUser::getHour() { return hour; }
-void SteamUser::setHour(int thisHour) { hour = thisHour; }
+void SteamUser::setHour(int hour) { this->hour = hour; }
