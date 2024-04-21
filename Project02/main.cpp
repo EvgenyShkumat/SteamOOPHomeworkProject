@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	Integer number(18);
+	Integer number(17);
 
 	cout << "The number is: " << number.getNumber() << endl;
 	cout << "The square of the number is: " << number.power(2) << endl;
