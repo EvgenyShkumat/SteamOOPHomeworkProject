@@ -7,10 +7,11 @@ using namespace std;
 
 int main() {
 	srand(time(NULL));
-	SteamUser user1("MrFish", 0.01, true, 5, 451);
-	SteamUser user2("phoenix", 0.28, true, 7, 102);
-	SteamUser user3("adsfakl", 1.52, false, 2, 56);
-	SteamUser user4("sonnik", 14.91, true, 10, 2802);
+
+	SteamUser user1("MrFish", 0.01, false, 5, 451);
+	SteamUser user2("phoenix", 0.28, false, 7, 102);
+	SteamUser user3("adsfakl", 1.52, true, 2, 56);
+	SteamUser user4("sonnik", 14.91, false, 10, 2802);
 
 	Server server1{};
 

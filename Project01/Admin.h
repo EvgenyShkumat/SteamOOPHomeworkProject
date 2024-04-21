@@ -3,7 +3,7 @@
 
 class Admin {
 public:
-	double findRichestBalance(SteamUser* accounts, int length);
-	SteamUser findRichestAccount(SteamUser* accounts, int length);
-	string findAllBannedAccounts(SteamUser* accounts, int length);
+	static double findRichestBalance(SteamUser* accounts, int length);
+	static SteamUser findRichestAccount(SteamUser* accounts, int length);
+	static string findAllBannedAccounts(SteamUser* accounts, int length);
 };
