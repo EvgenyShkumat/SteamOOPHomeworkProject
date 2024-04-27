@@ -1,18 +1,21 @@
 #pragma once
 #include "SteamUser.h"
 
-class Server
+class Group
 {
 private:
-	static const int DEFAULT_SIZE = 255;
-	SteamUser list[DEFAULT_SIZE];
 	int size;
+	SteamUser* list;
 public:
-	bool add(SteamUser user);
+
 	SteamUser get(int index);
 	bool set(SteamUser user, int index);
+	void add(SteamUser user);
+	void remove(int index);
+	void remove(SteamUser user);
+	int getFirstIndex(SteamUser user);
 
-	Server(int size = 0);
+	Group(int size = 0);
 
 	string getInfo();
 

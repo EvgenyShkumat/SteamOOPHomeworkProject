@@ -20,8 +20,14 @@ int main() {
 	group1.add(user3);
 	group1.add(user4);
 
-	cout << "The size of the server is: " << group1.getSize() << endl;
-	cout << "--------------------------------\n";
+	
+	cout << "Before remove\n";
+	cout << group1.getInfo();
+
+	group1.remove(1);
+	group1.remove(user4);
+
+	cout << "After remove\n";
 	cout << group1.getInfo();
 
 	return 0;
