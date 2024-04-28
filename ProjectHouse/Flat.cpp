@@ -69,12 +69,16 @@ Human Flat::get(int index) {
 }
 
 string Flat::getInfo() {
-	string msg = "Flat " + to_string(flat_number) + ":\n";
+	string msg = "-----------------------------\nSquare: " + 
+		to_string(square) + "\nPrice: " + to_string(price)
+		+ "\nNumber: " + to_string(flat_number) + "\n\nFlat lodgers:\n\n";
 	
 	for (int i = 0; i < size; i++)
 	{
 		msg += lodgers[i].getInfo() + "\n";
 	}
+
+	msg += "-----------------------------";
 
 	return msg;
 }
@@ -84,7 +88,7 @@ double Flat::getPricePerSquareMeter() {
 }
 
 Flat::~Flat() {
-	delete[] lodgers;
+	//delete[] lodgers;
 }
 
 Flat::Flat(int square, int price, int flat_number) {
