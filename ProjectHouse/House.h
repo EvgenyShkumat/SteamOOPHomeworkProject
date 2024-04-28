@@ -18,6 +18,13 @@ public:
 	Flat get(int index);
 	string getInfo();
 
+	int getAllSquare();
+	int getAllLodgers();
+	int getAllCost();
+	double getAvgDensity();
+	double getAvgCostPerMeter();
+	int getFlatsMoreTwoLodgers();
+
 	House(string street = "none", int house_number = 1);
 
 };

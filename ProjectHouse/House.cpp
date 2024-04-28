@@ -31,9 +31,8 @@ int House::findIndex(Flat flat) {
 
 Flat House::get(int index) {
 	if (index >= 0 && index <= size) {
-		return *(flats + index);
+		return flats[index];
 	}
-
 	return Flat();
 }
 string House::getInfo() {
@@ -50,4 +49,65 @@ string House::getInfo() {
 House::House(string street, int house_number) {
 	this->street = street;
 	this->house_number = house_number;
+}
+
+int House::getAllLodgers() {
+	int sum = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += flats[i].getSize();
+	}
+
+	return sum;
+}
+
+int House::getAllSquare() {
+	int sum = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += flats[i].getSquare();
+	}
+
+	return sum;
+}
+
+int House::getAllCost() {
+	int sum = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += flats[i].getPrice();
+	}
+
+	return sum;
+}
+
+double House::getAvgDensity() {
+	return getAllLodgers() / 1.0 / (size / 1.0);
+}
+
+double House::getAvgCostPerMeter() {
+	double sum = 0.0;
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += flats[i].getPricePerSquareMeter();
+	}
+
+	return sum / (size / 1.0);
+}
+
+int House::getFlatsMoreTwoLodgers() {
+	int sum = 0;
+	
+	for (int i = 0; i < size; i++)
+	{
+		if (flats[i].getSize() >= 2) {
+			sum++;
+		}
+	}
+
+	return sum;
 }

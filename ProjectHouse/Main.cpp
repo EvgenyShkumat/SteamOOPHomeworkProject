@@ -31,7 +31,12 @@ int main() {
 	house1.add(flat2);
 	house1.add(flat3);
 
-	cout << house1.getInfo();
+	cout << "All cost: " << house1.getAllCost() << endl;
+	cout << "All lodgers: " << house1.getAllLodgers() << endl;
+	cout << "All square: " << house1.getAllSquare() << endl;
+	cout << "Avg destiny: " << house1.getAvgDensity() << endl;
+	cout << "Avg cost per meter: " << house1.getAvgCostPerMeter() << endl;
+	cout << "Flats with two or more lodgers: " << house1.getFlatsMoreTwoLodgers() << endl;
 
 	return 0;	
 }
