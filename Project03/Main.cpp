@@ -18,5 +18,6 @@ int main() {
 	cout << dog.getInfo();
 	cout << giraffe.getInfo();
 	cout << crocodile.getInfo();
+
 	return 0;
 }
