@@ -10,11 +10,10 @@ private:
 	int level;
 	int hour;
 public:
-	SteamUser(string name = "no name", bool is_banned = false, 
-		double balance = 0, int level = 0, int hour = 0);
+	SteamUser(string name = "no name", bool is_banned = false, double balance = 0,
+		 int level = 0, int hour = 0);
 
 	string getInfo();
-	void replenish(double amount);
 
 	~SteamUser();
 

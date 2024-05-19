@@ -138,6 +138,7 @@
     <ClInclude Include="Admin.h" />
     <ClInclude Include="Developer.h" />
     <ClInclude Include="Group.h" />
+    <ClInclude Include="Operators.h" />
     <ClInclude Include="SteamUser.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>

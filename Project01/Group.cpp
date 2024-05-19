@@ -71,7 +71,7 @@ int Group::getFirstIndex(SteamUser user) {
 }
 
 string Group::getInfo() {
-	string s = "Server of users:\n";
+	string s = "Group of users:\n";
 
 	for (int i = 0; i < size; i++)
 	{

@@ -1,6 +1,6 @@
 #include "SteamUser.h"
 
-SteamUser::SteamUser(string name, bool is_banned, double balance, int level,
+SteamUser::SteamUser( string name, bool is_banned, double balance, int level,
 	int hour) : User(name, is_banned) {
 	this->balance = balance;
 	this->level = level;
@@ -11,10 +11,6 @@ string SteamUser::getInfo() {
 	return "Name: " + name + "\nBalance: " + to_string(balance) +
 		"\nSteam account level: " + to_string(level) + "\nTotal hours spent: " +
 		to_string(hour) + " hours\nIs banned: " + (is_banned ? "Yes" : "No") + "\n";
-}
-
-void SteamUser::replenish(double amount) {
-	balance += amount;
 }
 
 SteamUser::~SteamUser() { }
