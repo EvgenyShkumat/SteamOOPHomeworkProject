@@ -4,7 +4,7 @@ using namespace std;
 
 class User
 {
-private:
+protected:
 	string name;
 	bool is_banned;
 public:

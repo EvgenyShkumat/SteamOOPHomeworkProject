@@ -8,9 +8,9 @@ SteamUser::SteamUser(string name, bool is_banned, double balance, int level,
 }
 
 string SteamUser::getInfo() {
-	return "Name: " + getName() + "\nBalance: " + to_string(balance) +
+	return "Name: " + name + "\nBalance: " + to_string(balance) +
 		"\nSteam account level: " + to_string(level) + "\nTotal hours spent: " +
-		to_string(hour) + " hours\nIs banned: " + (getIs_banned() ? "Yes" : "No") + "\n";
+		to_string(hour) + " hours\nIs banned: " + (is_banned ? "Yes" : "No") + "\n";
 }
 
 void SteamUser::replenish(double amount) {
